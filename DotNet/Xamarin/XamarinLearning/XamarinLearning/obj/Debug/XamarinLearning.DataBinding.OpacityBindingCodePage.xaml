@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="XamarinLearning.OpacityBindingCodePage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="labelStyle" TargetType="Label">
+				<Setter Property="FontSize" Value="Large"/>
+				<Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+				<Setter Property="HorizontalOptions" Value="Center"/>
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<StackLayout x:Name="mainStack">
+		<Label  Text="Opacity Binding Demo (XAML#1)"
+				BindingContext="{x:Reference Name=slider}"
+				Opacity="{Binding Path=Value}"
+				Style="{StaticResource labelStyle}"/>
+		<Label  Text="Opacity Binding Demo (XAML#2)"
+				Opacity="{Binding Source={x:Reference Name=slider}, Path=Value}"
+				Style="{StaticResource labelStyle}"/>
+		<Label  Text="Opacity Binding Demo (XAML#3)"
+				Style="{StaticResource labelStyle}">
+			<Label.BindingContext>
+				<x:Reference Name="slider"/>
+			</Label.BindingContext>
+			<Label.Opacity>
+				<Binding Path="Value"/>
+			</Label.Opacity>
+		</Label>
+		<Slider x:Name="slider"
+				VerticalOptions="CenterAndExpand" />
+	</StackLayout>
+</ContentPage>
