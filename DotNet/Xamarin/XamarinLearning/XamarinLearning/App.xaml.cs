@@ -8,7 +8,7 @@ namespace XamarinLearning
 		{
 			InitializeComponent();
 
-			MainPage = new DataBinding.WebViewDemo();
+			MainPage = new DataBinding.ValueConvertersDemoPage();
 		}
 
 		protected override void OnStart()

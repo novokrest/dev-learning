@@ -41,6 +41,15 @@
     <EmbeddedResource Include="DataBinding\WebViewDemo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataBinding\StringFormatDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBinding\WhatSizeDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBinding\ValueConvertersDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -60,6 +69,18 @@
     <Compile Include="DataBinding\WebViewDemo.xaml.cs">
       <DependentUpon>WebViewDemo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBinding\StringFormatDemoPage.xaml.cs">
+      <DependentUpon>StringFormatDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBinding\WhatSizeDemoPage.xaml.cs">
+      <DependentUpon>WhatSizeDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBinding\BoolToStringConverter.cs" />
+    <Compile Include="DataBinding\BoolToColorConverter.cs" />
+    <Compile Include="DataBinding\ValueConvertersDemoPage.xaml.cs">
+      <DependentUpon>ValueConvertersDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBinding\BoolToObjectConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
