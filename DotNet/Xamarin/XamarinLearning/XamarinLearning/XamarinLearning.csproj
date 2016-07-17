@@ -38,6 +38,9 @@
     <EmbeddedResource Include="MarkupExtension\CustomExtensionDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataBinding\WebViewDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -53,6 +56,9 @@
     <Compile Include="MarkupExtension\HslColorExtension.cs" />
     <Compile Include="MarkupExtension\CustomExtensionDemoPage.xaml.cs">
       <DependentUpon>CustomExtensionDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBinding\WebViewDemo.xaml.cs">
+      <DependentUpon>WebViewDemo.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

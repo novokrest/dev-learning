@@ -8,7 +8,7 @@ namespace XamarinLearning
 		{
 			InitializeComponent();
 
-			MainPage = new OpacityBindingCodePage();
+			MainPage = new DataBinding.WebViewDemo();
 		}
 
 		protected override void OnStart()
